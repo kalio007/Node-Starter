@@ -50,7 +50,13 @@
 // }
 // callAnother(sayBye)
 
+
+
+
 // using the require() function to pull data from a different file/location
 
-require('./Count')
+var stuff = require('./Count')
+// making it a varialbe helps for simplification when exporting diff funcs from a module 
 
+console.log(stuff.counter(['kalio', 'Princewillis',`Obed`]))
+console.log(stuff.pi)
