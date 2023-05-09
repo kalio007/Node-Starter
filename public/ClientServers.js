@@ -20,6 +20,7 @@
 var http = require('http');
  
 var server = http.createServer(function(req, res){
+    console.log('request was made:' + req.url);
     res.writeHead(200, {'Content-Type': 'text/plain'} )
     res.end('hey Kalio'); // to end the responses
 });
@@ -33,5 +34,6 @@ var server = http.createServer(function(req, res){
 //404 if the page cannot be found
 // content type could be Json, plain text
 
-server.listen(3000, '127.0.0.1')
+//server.listen(3000, '127.0.0.1')
+// what port to listen to and the IP
 console.log('hey listening to port 3000')
