@@ -15,7 +15,18 @@ var server = http.createServer(function(req, res){
     } else if(req.url === '/contact'){
         res.writeHead(200, {'Content-Type': 'text/html'});
         fs.createReadStream(__dirname + '/contact.html').pipe(res);
+    } else if(req.url === './api/kalio'){
+        var kalio = [{name: 'kalio', age:20}, {name: 'Prosper', age:32}];
+        res.writeHead(200, {'Content-Type': 'application/json'});
+        res.end(JSON.stringify(kalio));
+        // res.end takes in a string or a buffer
+    } else {
+        res.writeHead(404, {'Content-Type': 'text/html'});
+        fs.createReadStream(__dirname + '/404.html').pipe(res);
     }
+    // if the req doesn't catch anything on our server we can pass the 404 page and 404 status
+
+
     // the else statement is to route the page to a differnt page
     // application/json type because thats what we sending to the browser
     var myObj = {
