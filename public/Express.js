@@ -10,12 +10,14 @@ const app = express(); //now we have access to all of express functions
 app.get('/', function(req, res){
     res.send('this is the home page');
 });
-// app.get('/contact', function(req, res){
-//     res.send('this is the contact Page');
-// });
-// app.get('/profile/:id', function(res, req){
-//     res.send('your request with such id' + req.params.id);
-//     // params stores key
-// })
+app.get('/contact', function(req, res){
+    res.send('this is the contact Page');
+});
+app.get('/profile/:id', function(res, req){
+    res.send('your request with such id' + req.params.id);
+    // params stores the parameter
+})
 
 app.listen(3000);
+// <% this is to pass ajavascript
+// <%= this is to pass an object

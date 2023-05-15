@@ -24,7 +24,7 @@ var server = http.createServer(function(req, res){
         res.writeHead(404, {'Content-Type': 'text/html'});
         fs.createReadStream(__dirname + '/404.html').pipe(res);
     }
-    // if the req doesn't catch anything on our server we can pass the 404 page and 404 status
+    // if the req doesn't catch anything on our server we can pass the 404 page and 404 status 
 
 
     // the else statement is to route the page to a differnt page
