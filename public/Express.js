@@ -18,6 +18,6 @@ app.get('/profile/:id', function(res, req){
     // params stores the parameter
 })
 
-app.listen(3000);
+//app.listen(3000);
 // <% this is to pass ajavascript
 // <%= this is to pass an object
